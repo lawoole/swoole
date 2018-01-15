@@ -23,6 +23,7 @@
             "Swoole\\": "src/Swoole"
         },
         "files": [
+            "src/constants.php",
             "src/classes.php",
             "src/functions.php"
         ]
