@@ -3,6 +3,8 @@ namespace Swoole;
 
 /**
  * 锁实现
+ *
+ * @since 1.6.4
  */
 class Lock
 {
