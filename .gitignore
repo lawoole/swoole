@@ -1,0 +1,18 @@
+# 系统和编辑器文件
+._*
+.DS_Store
+Thumbs.db
+.idea
+.project
+.settings
+.tmproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+
+# Composer
+/vendor
+composer.lock
+
+# Unit Test
+/phpunit.xml

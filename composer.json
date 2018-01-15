@@ -1,0 +1,32 @@
+{
+    "name": "lawoole/swoole-api",
+    "description": "Swoole Api",
+    "keywords": ["swoole", "lawoole", "api"],
+    "license": "MIT",
+    "homepage": "https://github.com/lawoole/swoole-api",
+    "type": "library",
+    "support": {
+        "issues": "https://github.com/lawoole/swoole-api/issues",
+        "source": "https://github.com/lawoole/swoole-api"
+    },
+    "authors": [
+        {
+            "name": "You Ming",
+            "email": "youming@funcuter.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Swoole\\": "src/Swoole"
+        },
+        "files": [
+            "src/classes.php",
+            "src/functions.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
