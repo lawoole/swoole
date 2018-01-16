@@ -29,6 +29,13 @@ class swoole_lock extends \Swoole\Lock
 }
 
 /**
+ * Class swoole_serialize
+ */
+class swoole_serialize extends \Swoole\Serialize
+{
+}
+
+/**
  * Class swoole_exception
  */
 class swoole_exception extends \Swoole\Exception

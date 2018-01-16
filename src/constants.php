@@ -103,3 +103,17 @@ const SWOOLE_SEM = 4;
  */
 const SWOOLE_SPINLOCK = 5;
 
+/**
+ * 序列化参数：快速打包（不保留数组 Key）
+ */
+const SWOOLE_FAST_PACK = 1;
+
+/**
+ * 反序列化参数：解析对象为数组
+ */
+const UNSERIALIZE_OBJECT_TO_ARRAY = 1;
+
+/**
+ * 反序列化参数：解析对象为标准对象
+ */
+const UNSERIALIZE_OBJECT_TO_STDCLASS = 2;
