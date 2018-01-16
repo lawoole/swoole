@@ -22,6 +22,13 @@ class swoole_process extends \Swoole\Process
 }
 
 /**
+ * Class swoole_timer
+ */
+class swoole_timer extends \Swoole\Timer
+{
+}
+
+/**
  * Class swoole_buffer
  */
 class swoole_buffer extends \Swoole\Buffer
