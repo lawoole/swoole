@@ -15,6 +15,13 @@ class swoole_server_port extends \Swoole\Server\Port
 }
 
 /**
+ * Class swoole_process
+ */
+class swoole_process extends \Swoole\Process
+{
+}
+
+/**
  * Class swoole_buffer
  */
 class swoole_buffer extends \Swoole\Buffer
