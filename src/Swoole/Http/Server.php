@@ -28,6 +28,4 @@ class Server extends BaseServer
      * @var callable
      */
     public $onHandshake;
-
-
 }

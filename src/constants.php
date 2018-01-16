@@ -83,6 +83,44 @@ const SWOOLE_UNIX_DGRAM = SWOOLE_SOCK_UNIX_DGRAM;
  */
 const SWOOLE_UNIX_STREAM = SWOOLE_SOCK_UNIX_STREAM;
 
+
+/**
+ * WebSocket 操作码：文本
+ */
+const WEBSOCKET_OPCODE_TEXT = 1;
+
+/**
+ * WebSocket 操作码：二进制
+ */
+const WEBSOCKET_OPCODE_BINARY = 2;
+
+/**
+ * WebSocket 操作码：Ping
+ */
+const WEBSOCKET_OPCODE_PING = 9;
+
+
+/**
+ * WebSocket 状态：连接中
+ */
+const WEBSOCKET_STATUS_CONNECTION = 1;
+
+/**
+ * WebSocket 状态：握手中
+ */
+const WEBSOCKET_STATUS_HANDSHAKE = 2;
+
+/**
+ * WebSocket 状态：数据帧
+ */
+const WEBSOCKET_STATUS_FRAME = 3;
+
+/**
+ * WebSocket 状态：活跃中
+ */
+const WEBSOCKET_STATUS_ACTIVE = 3;
+
+
 /**
  * 信号：
  */

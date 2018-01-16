@@ -36,6 +36,20 @@ class swoole_http_response extends \Swoole\Http\Response
 }
 
 /**
+ * Class swoole_websocket_server
+ */
+class swoole_websocket_server extends \Swoole\WebSocket\Server
+{
+}
+
+/**
+ * Class swoole_websocket_frame
+ */
+class swoole_websocket_frame extends \Swoole\WebSocket\Frame
+{
+}
+
+/**
  * Class swoole_process
  */
 class swoole_process extends \Swoole\Process
