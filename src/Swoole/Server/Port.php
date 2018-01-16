@@ -28,7 +28,7 @@ class Port
     public $type;
 
     /**
-     * Socket 资源对象
+     * Socket 资源
      *
      * @var resource
      */
@@ -140,7 +140,7 @@ class Port
     }
 
     /**
-     * 获得 Socket 资源对象
+     * 获得 Socket 资源
      *
      * @return resource
      */

@@ -220,4 +220,422 @@ class Server
     public function __construct($host, $port = 0, $mode = SWOOLE_PROCESS, $sockType = SWOOLE_TCP)
     {
     }
+
+    /**
+     * 设置服务配置
+     *
+     * @param array $options
+     */
+    public function set($options)
+    {
+    }
+
+    /**
+     * 注册事件回调
+     *
+     * @param string $event
+     * @param callable $callback
+     *
+     * @return bool
+     */
+    public function on($event, $callback)
+    {
+    }
+
+    /**
+     * 增加端口监听
+     *
+     * @param string $host
+     * @param int $port
+     * @param int $type
+     *
+     * @return \Swoole\Server\Port
+     */
+    public function listen($host, $port, $type)
+    {
+    }
+
+    /**
+     * 增加端口监听
+     *
+     * @param string $host
+     * @param int $port
+     * @param int $type
+     *
+     * @return \Swoole\Server\Port
+     */
+    public function addlistener($host, $port, $type)
+    {
+    }
+
+    /**
+     * 添加进程定义
+     *
+     * @since 1.7.9
+     *
+     * @param \Swoole\Process $process
+     *
+     * @return int 进程 ID
+     */
+    public function addProcess(Process $process)
+    {
+    }
+
+    /**
+     * 启动服务
+     *
+     * @return int|bool
+     */
+    public function start()
+    {
+    }
+
+    /**
+     * 向客户端发送数据
+     *
+     * @param int $fd
+     * @param string $data
+     * @param int $serverSocket
+     *
+     * @return bool
+     */
+    public function send($fd, $data, $serverSocket = -1)
+    {
+    }
+
+    /**
+     * 向指定客户端发送 Udp 数据包
+     *
+     * @param string $ip
+     * @param int $port
+     * @param string $data
+     * @param int $serverSocket
+     *
+     * @return bool
+     */
+    public function sendto($ip, $port, $data, $serverSocket = -1)
+    {
+    }
+
+    /**
+     * 向客户端发送文件中的数据
+     *
+     * @param int $fd
+     * @param string $filename
+     * @param int $offset
+     * @param int $length
+     *
+     * @return bool
+     */
+    public function sendfile($fd, $filename, $offset = 0, $length = 0)
+    {
+    }
+
+    /**
+     * 确认接入连接
+     *
+     * @param int $fd
+     *
+     * @return bool
+     */
+    public function confirm($fd)
+    {
+    }
+
+    /**
+     * 暂停数据接收
+     *
+     * @param int $fd
+     *
+     * @return bool
+     */
+    public function pause($fd)
+    {
+    }
+
+    /**
+     * 恢复数据接收
+     *
+     * @param int $fd
+     *
+     * @return bool
+     */
+    public function resume($fd)
+    {
+    }
+
+    /**
+     * 获得服务当前统计数据
+     *
+     * @return array
+     */
+    public function stats()
+    {
+    }
+
+    /**
+     * 重启所有工作进程
+     *
+     * @param bool $onlyTask 是否只重启任务工作进程
+     *
+     * @return bool
+     */
+    public function reload($onlyTask = false)
+    {
+    }
+
+    /**
+     * 检测服务器所有连接，并找出心跳超时的连接
+     *
+     * @param bool $close 是否自动关闭心跳超时连接
+     *
+     * @return array
+     */
+    public function heartbeat($close = false)
+    {
+    }
+
+    /**
+     * 投递任务，阻塞等待任务执行完成或超时
+     *
+     * @param mixed $data
+     * @param float $timeout
+     * @param int $dstWorkerId
+     *
+     * @return mixed
+     */
+    public function taskwait($data, $timeout = 0.5, $dstWorkerId = -1)
+    {
+    }
+
+    /**
+     * 同时投递多个任务，阻塞等待任务执行完成或超时
+     *
+     * @param array $tasks
+     * @param float $timeout
+     *
+     * @return array
+     */
+    public function taskWaitMulti(array $tasks, $timeout = 0.5)
+    {
+    }
+
+    /**
+     * 推送任务
+     *
+     * @param mixed $data
+     * @param int $dstWorkerId
+     *
+     * @return int
+     */
+    public function task($data, $dstWorkerId = -1)
+    {
+    }
+
+    /**
+     * 向指定进程发送消息
+     *
+     * @param mixed $data
+     * @param int $dstWorkerId
+     *
+     * @return bool
+     */
+    public function sendMessage($data, $dstWorkerId)
+    {
+    }
+
+    /**
+     * 任务工作进程向关联的工作进程发送处理结果数据
+     *
+     * @param mixed $data
+     */
+    public function finish($data)
+    {
+    }
+
+    /**
+     * 为连接设置 UID
+     *
+     * @param int $fd
+     * @param int $uid
+     *
+     * @return bool
+     */
+    public function bind($fd, $uid)
+    {
+    }
+
+    /**
+     * 获得 Socket 资源
+     *
+     * @param int $port
+     *
+     * @return resource
+     */
+    public function getSocket($port = 0)
+    {
+    }
+
+    /**
+     * 获得连接信息
+     *
+     * @param int $fd
+     * @param int $fromId
+     * @param bool $checkConnection
+     *
+     * @return array
+     */
+    public function connection_info($fd, $fromId, $checkConnection = false)
+    {
+    }
+
+    /**
+     * 获得连接信息
+     *
+     * @param int $fd
+     * @param int $fromId
+     * @param bool $checkConnection
+     *
+     * @return array
+     */
+    public function getClientInfo($fd, $fromId, $checkConnection = false)
+    {
+    }
+
+    /**
+     * 获得连接列表
+     *
+     * @param int $startFd
+     * @param int $findCount
+     *
+     * @return array
+     */
+    public function connection_list($startFd = 0, $findCount = 10)
+    {
+    }
+
+    /**
+     * 获得连接列表
+     *
+     * @param int $startFd
+     * @param int $findCount
+     *
+     * @return array
+     */
+    public function getClientList($startFd = 0, $findCount = 10)
+    {
+    }
+
+    /**
+     * 向客户端发送数据，阻塞等待发送完成
+     *
+     * @param int $fd
+     * @param string $data
+     *
+     * @return bool
+     */
+    public function sendwait($fd, $data)
+    {
+    }
+
+    /**
+     * 判断连接是否存在
+     *
+     * @param int $fd
+     *
+     * @return bool
+     */
+    public function exist($fd)
+    {
+    }
+
+    /**
+     * 设置连接保护标记，避免被心跳检查关闭
+     *
+     * @param int $fd
+     * @param bool $value
+     *
+     * @return bool
+     */
+    public function protect($fd, $value = true)
+    {
+    }
+
+    /**
+     * 停止服务
+     *
+     * @return bool
+     */
+    public function shutdown()
+    {
+    }
+
+    /**
+     * 停止工作进程
+     *
+     * @param int $workerId
+     * @param bool $waitEvent
+     *
+     * @return bool
+     */
+    public function stop($workerId = -1, $waitEvent = false)
+    {
+    }
+
+    /**
+     * 获得最后产生的错误码
+     *
+     * @return int
+     */
+    public function getLastError()
+    {
+    }
+
+    /**
+     * 定义间隔定时器
+     *
+     * @param int $after 间隔时间，单位毫秒
+     * @param callable $callback
+     * @param array $params
+     *
+     * @return int
+     */
+    public function tick($interval, $callback, array $params = [])
+    {
+    }
+
+    /**
+     * 定义延迟定时器
+     *
+     * @param int $after 延迟时间，单位毫秒
+     * @param callable $callback
+     * @param array $params
+     *
+     * @return int
+     */
+    public function after($after, $callback, array $params = [])
+    {
+    }
+
+    /**
+     * 清除定时器
+     *
+     * @param int $timerId
+     *
+     * @return bool
+     */
+    public function clearTimer($timerId)
+    {
+    }
+
+    /**
+     * 定义延迟回调，调用会在当前事件循环结束时执行
+     *
+     * @param callable $callback
+     *
+     * @return bool
+     */
+    public function swoole_event_defer($callback)
+    {
+    }
 }
