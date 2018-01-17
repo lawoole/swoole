@@ -99,6 +99,13 @@ class swoole_channel extends \Swoole\Channel
 }
 
 /**
+ * Class swoole_mmap
+ */
+class swoole_mmap extends \Swoole\Mmap
+{
+}
+
+/**
  * Class swoole_serialize
  */
 class swoole_serialize extends \Swoole\Serialize
