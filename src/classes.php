@@ -92,6 +92,13 @@ class swoole_table_row extends \Swoole\Table\Row
 }
 
 /**
+ * Class swoole_channel
+ */
+class swoole_channel extends \Swoole\Channel
+{
+}
+
+/**
  * Class swoole_serialize
  */
 class swoole_serialize extends \Swoole\Serialize
