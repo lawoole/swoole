@@ -78,6 +78,20 @@ class swoole_lock extends \Swoole\Lock
 }
 
 /**
+ * Class swoole_table
+ */
+class swoole_table extends \Swoole\Table
+{
+}
+
+/**
+ * Class swoole_table_row
+ */
+class swoole_table_row extends \Swoole\Table\Row
+{
+}
+
+/**
  * Class swoole_serialize
  */
 class swoole_serialize extends \Swoole\Serialize
