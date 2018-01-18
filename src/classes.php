@@ -1,9 +1,10 @@
 <?php
 
 // 避免 Swoole 扩展存在时的重复定义
-if (class_exists('swoole_server')) {
+if (extension_loaded('swoole')) {
     return;
 }
+
 
 /**
  * Class swoole_server

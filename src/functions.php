@@ -1,7 +1,7 @@
 <?php
 
 // 避免 Swoole 扩展存在时的重复定义
-if (function_exists('swoole_version')) {
+if (extension_loaded('swoole')) {
     return;
 }
 
