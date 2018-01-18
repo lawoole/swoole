@@ -18,16 +18,6 @@
     "require": {
         "php": ">=5.3.10"
     },
-    "autoload": {
-        "psr-4": {
-            "Swoole\\": "src/Swoole"
-        },
-        "files": [
-            "src/constants.php",
-            "src/classes.php",
-            "src/functions.php"
-        ]
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
