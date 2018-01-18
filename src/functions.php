@@ -1,5 +1,11 @@
 <?php
 
+// 避免 Swoole 扩展存在时的重复定义
+if (function_exists('swoole_version')) {
+    return;
+}
+
+
 /**
  * 获得 Swoole 版本号
  *
