@@ -17,7 +17,7 @@ function swoole_last_error()
 }
 
 /**
- * 获得 CPU 核心数
+ * 获得 Cpu 核心数
  *
  * @return int
  */
@@ -26,7 +26,25 @@ function swoole_cpu_num()
 }
 
 /**
- * 进入 Select 事件循环
+ * 获得本机 Ip 地址
+ *
+ * @return array
+ */
+function swoole_get_local_ip()
+{
+}
+
+/**
+ * 获得本机 Mac 地址
+ *
+ * @return array
+ */
+function swoole_get_local_mac()
+{
+}
+
+/**
+ * 进入事件选取
  *
  * @param array $read
  * @param array $write
@@ -105,5 +123,25 @@ function swoole_event_defer($callback)
  * @param int $size
  */
 function swoole_set_process_name($name, $size = 128)
+{
+}
+
+/**
+ * 获取最近一次系统调用的错误码
+ *
+ * @return int
+ */
+function swoole_errno()
+{
+}
+
+/**
+ * 将错误码转换成错误信息
+ *
+ * @param int $error
+ *
+ * @return string
+ */
+function swoole_strerror($error)
 {
 }
