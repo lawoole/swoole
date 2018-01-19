@@ -1,11 +1,5 @@
 <?php
 
-// 避免 Swoole 扩展存在时的重复定义
-if (extension_loaded('swoole')) {
-    return;
-}
-
-
 /**
  * Swoole 版本号
  */

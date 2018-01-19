@@ -1,11 +1,5 @@
 <?php
 
-// 避免 Swoole 扩展存在时的重复定义
-if (extension_loaded('swoole')) {
-    return;
-}
-
-
 /**
  * Class swoole_server
  */
@@ -52,6 +46,34 @@ class swoole_websocket_server extends \Swoole\WebSocket\Server
  * Class swoole_websocket_frame
  */
 class swoole_websocket_frame extends \Swoole\WebSocket\Frame
+{
+}
+
+/**
+ * Class swoole_client
+ */
+class swoole_client extends \Swoole\Client
+{
+}
+
+/**
+ * Class swoole_http_client
+ */
+class swoole_http_client extends \Swoole\Http\Client
+{
+}
+
+/**
+ * Class swoole_http2_client
+ */
+class swoole_http2_client extends \Swoole\Http\Client
+{
+}
+
+/**
+ * Class swoole_http2_response
+ */
+class swoole_http2_response extends \Swoole\Http2\Response
 {
 }
 

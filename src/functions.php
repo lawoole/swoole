@@ -1,11 +1,5 @@
 <?php
 
-// 避免 Swoole 扩展存在时的重复定义
-if (extension_loaded('swoole')) {
-    return;
-}
-
-
 /**
  * 获得 Swoole 版本号
  *
@@ -28,6 +22,20 @@ function swoole_last_error()
  * @return int
  */
 function swoole_cpu_num()
+{
+}
+
+/**
+ * 进入 Select 事件循环
+ *
+ * @param array $read
+ * @param array $write
+ * @param array $error
+ * @param float $timeout
+ *
+ * @return int
+ */
+function swoole_client_select(array &$read, array &$write, array &$error, $timeout = 0.5)
 {
 }
 
