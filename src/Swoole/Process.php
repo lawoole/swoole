@@ -55,7 +55,14 @@ class Process
      */
     public $id;
 
-    public function __construct()
+    /**
+     * 创建进程对象
+     *
+     * @param callable $callback
+     * @param bool $redirect
+     * @param int $pipeType
+     */
+    public function __construct($callback, $redirect = false, $pipeType = 2)
     {
     }
 
