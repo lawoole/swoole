@@ -85,6 +85,17 @@ const SWOOLE_UNIX_STREAM = SWOOLE_SOCK_UNIX_STREAM;
 
 
 /**
+ * 事件类型：读取事件
+ */
+const SWOOLE_EVENT_READ = 512;
+
+/**
+ * 事件类型：写入事件
+ */
+const SWOOLE_EVENT_WRITE = 1024;
+
+
+/**
  * WebSocket 操作码：文本
  */
 const WEBSOCKET_OPCODE_TEXT = 1;

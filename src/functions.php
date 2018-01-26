@@ -106,13 +106,89 @@ function swoole_timer_exists($timerId)
 }
 
 /**
- * 定义延迟回调，调用会在当前事件循环结束时执行
+ * 加入事件监听
+ *
+ * @param int|resource $fd
+ * @param callable $readCallback
+ * @param callable $writeCallback
+ * @param int $flags
+ *
+ * @return int
+ */
+function swoole_event_add($fd, $readCallback = null, $writeCallback = null, $flags = 0)
+{
+}
+
+/**
+ * 向流中写入数据
+ *
+ * @param int|resource $fd
+ * @param string $data
+ *
+ * @return bool
+ */
+function swoole_event_write($fd, $data)
+{
+}
+
+/**
+ * 修改事件监听的回调
+ *
+ * @param int|resource $fd
+ * @param callable $readCallback
+ * @param callable $writeCallback
+ * @param int $flags
+ *
+ * @return int
+ */
+function swoole_event_set($fd, $readCallback = null, $writeCallback = null, $flags = 0)
+{
+}
+
+/**
+ * 删除事件监听
+ *
+ * @param int|resource $fd
+ *
+ * @return bool
+ */
+function swoole_event_del($fd)
+{
+}
+
+/**
+ * 事件当次循环结束后回调
  *
  * @param callable $callback
  *
  * @return bool
  */
 function swoole_event_defer($callback)
+{
+}
+
+/**
+ * 事件每次循环结束后回调
+ *
+ * @param callable $callback
+ *
+ * @return bool
+ */
+function swoole_event_cycle($callback)
+{
+}
+
+/**
+ * 退出事件循环
+ */
+function swoole_event_exit()
+{
+}
+
+/**
+ * 进入事件循环
+ */
+function swoole_event_wait()
 {
 }
 
