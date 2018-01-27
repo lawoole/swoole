@@ -425,10 +425,11 @@ class Server
      *
      * @param mixed $data
      * @param int $dstWorkerId
+     * @param callable $callback
      *
      * @return int
      */
-    public function task($data, $dstWorkerId = -1)
+    public function task($data, $dstWorkerId = -1, $callback = null)
     {
     }
 
@@ -629,13 +630,13 @@ class Server
     }
 
     /**
-     * 定义延迟回调，调用会在当前事件循环结束时执行
+     * 事件当次循环结束后回调
      *
      * @param callable $callback
      *
      * @return bool
      */
-    public function swoole_event_defer($callback)
+    public function defer($callback)
     {
     }
 }
