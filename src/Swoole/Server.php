@@ -485,7 +485,7 @@ class Server
      *
      * @return array
      */
-    public function connection_info($fd, $fromId, $checkConnection = false)
+    public function connection_info($fd, $fromId = -1, $checkConnection = false)
     {
     }
 
@@ -498,7 +498,7 @@ class Server
      *
      * @return array
      */
-    public function getClientInfo($fd, $fromId, $checkConnection = false)
+    public function getClientInfo($fd, $fromId = -1, $checkConnection = false)
     {
     }
 
