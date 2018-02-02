@@ -89,6 +89,31 @@ const SWOOLE_UNIX_STREAM = SWOOLE_SOCK_UNIX_STREAM;
  */
 const SWOOLE_SSL = 1 << 9;
 
+/**
+ * 长连接：维持连接标识
+ */
+const SWOOLE_KEEP = 1 << 12;
+
+
+/**
+ * Socket 模式：异步
+ */
+const SWOOLE_SOCK_ASYNC = 1 << 10;
+
+/**
+ * Socket 模式：同步
+ */
+const SWOOLE_SOCK_SYNC = 1 << 11;
+
+/**
+ * Socket 模式：异步
+ */
+const SWOOLE_ASYNC = SWOOLE_SOCK_ASYNC;
+
+/**
+ * Socket 模式：同步
+ */
+const SWOOLE_SYNC = SWOOLE_SOCK_SYNC;
 
 /**
  * 事件类型：读取事件
