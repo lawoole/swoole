@@ -85,6 +85,12 @@ const SWOOLE_UNIX_STREAM = SWOOLE_SOCK_UNIX_STREAM;
 
 
 /**
+ * SSL：SSL 启用标识
+ */
+const SWOOLE_SSL = 1 << 9;
+
+
+/**
  * 事件类型：读取事件
  */
 const SWOOLE_EVENT_READ = 512;
