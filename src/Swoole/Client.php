@@ -128,10 +128,10 @@ class Client
      * 创建客户端对象
      *
      * @param int $sockType
-     * @param bool $isSync
+     * @param bool $isAsync
      * @param string $id 客户端标识。主要用于复用，默认为 "ip:port"
      */
-    public function __construct($sockType, $isSync = false, $id = null)
+    public function __construct($sockType, $isAsync = false, $id = null)
     {
     }
 
