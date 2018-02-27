@@ -11,7 +11,7 @@ Lawoole Swoole Api 以代码方式展示了 Swoole 对外提供的 Api 定义。
 ```json
 {
     "require-dev": {
-        "lawoole/swoole-api": "{version}"
+        "lawoole/swoole": "dev-master"
     }
 }
 ```
