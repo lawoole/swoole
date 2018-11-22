@@ -1,4 +1,4 @@
-# 系统和编辑器文件
+# OS and Editor files
 ._*
 .DS_Store
 Thumbs.db
@@ -11,8 +11,5 @@ Thumbs.db
 nbproject
 
 # Composer
-/vendor
+vendor
 composer.lock
-
-# Unit Test
-/phpunit.xml
