@@ -53,7 +53,7 @@ function swoole_get_local_mac()
  *
  * @return int
  */
-function swoole_client_select(array &$read, array &$write, array &$error, $timeout = 0.5)
+function swoole_client_select(array &$read, array &$write, array &$error, $timeout = SW_CLIENT_DEFAULT_TIMEOUT)
 {
 }
 
@@ -219,5 +219,139 @@ function swoole_errno()
  * @return string
  */
 function swoole_strerror($error)
+{
+}
+
+/**
+ * Read file.
+ *
+ * @param string $filename
+ * @param callable $callback
+ * @param int $bufferSize
+ * @param int $offset
+ *
+ * @return bool
+ */
+function swoole_async_read($filename, $callback, $bufferSize = SW_AIO_DEFAULT_CHUNK_SIZE, $offset = 0)
+{
+}
+
+/**
+ * Write file.
+ *
+ * @param string $filename
+ * @param string $content
+ * @param int $offset
+ * @param callable $callback
+ *
+ * @return bool
+ */
+function swoole_async_write($filename, $content, $offset = -1, $callback = null)
+{
+}
+
+/**
+ * Read file.
+ *
+ * @param string $filename
+ * @param callable $callback
+ *
+ * @return bool
+ */
+function swoole_async_readfile($filename, $callback)
+{
+}
+
+/**
+ * Write file.
+ *
+ * @param string $filename
+ * @param string $content
+ * @param callable $callback
+ * @param int $flag
+ *
+ * @return bool
+ */
+function swoole_async_writefile($filename, $content, $callback = null, $flag = 0)
+{
+}
+
+/**
+ * Set async settings.
+ *
+ * @param array $settings
+ */
+function swoole_async_set(array $settings)
+{
+}
+
+/**
+ * Look up the given domain.
+ *
+ * @param string $domain
+ * @param callable $callback
+ *
+ * @return bool
+ */
+function swoole_async_dns_lookup($domain, $callback)
+{
+}
+
+/**
+ * Look up the given domain.
+ *
+ * @param string $domain
+ * @param float $timeout
+ *
+ * @return string
+ */
+function swoole_async_dns_lookup_coro($domain, $timeout)
+{
+}
+
+/**
+ * Create a coroutine.
+ *
+ * @param callable $callback
+ * @param mixed ...$args
+ *
+ * @return int
+ */
+function swoole_coroutine_create($callback, ...$args)
+{
+}
+
+/**
+ * Get host by name.
+ *
+ * @param string $domain
+ * @param int $family
+ *
+ * @return string
+ */
+function swoole_coroutine_gethostbyname($domain, $family = AF_INET)
+{
+}
+
+/**
+ * Execute a command in coroutine.
+ *
+ * @param string $command
+ * @param bool $getErrorStream
+ *
+ * @return string
+ */
+function swoole_coroutine_exec($command, $getErrorStream = false)
+{
+}
+
+/**
+ * Set a defer callback.
+ *
+ * @param callable $callback
+ *
+ * @return string
+ */
+function swoole_coroutine_defer($callback)
 {
 }

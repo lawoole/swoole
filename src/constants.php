@@ -168,3 +168,9 @@ const UNSERIALIZE_OBJECT_TO_ARRAY = 1;
  * Serialize : Decode object as object
  */
 const UNSERIALIZE_OBJECT_TO_STDCLASS = 2;
+
+// --------------- ↓ Internal Const ↓ Do Not use in Codes ↓ --------------------
+
+const SW_AIO_DEFAULT_CHUNK_SIZE = 65536;
+
+const SW_CLIENT_DEFAULT_TIMEOUT = 0.5;
