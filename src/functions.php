@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 获得 Swoole 版本号
+ * Return the Swoole version.
  *
  * @return string
  */
@@ -10,14 +10,14 @@ function swoole_version()
 }
 
 /**
- * 获得最后产生的错误码
+ * Get latest error code.
  */
 function swoole_last_error()
 {
 }
 
 /**
- * 获得 Cpu 核心数
+ * Get the number of Cpu cores。
  *
  * @return int
  */
@@ -26,7 +26,7 @@ function swoole_cpu_num()
 }
 
 /**
- * 获得本机 Ip 地址
+ * Get the local Ip address.
  *
  * @return array
  */
@@ -35,7 +35,7 @@ function swoole_get_local_ip()
 }
 
 /**
- * 获得本机 Mac 地址
+ * Get the local Mac address.
  *
  * @return array
  */
@@ -44,7 +44,7 @@ function swoole_get_local_mac()
 }
 
 /**
- * 进入事件选取
+ * Select event.
  *
  * @param array $read
  * @param array $write
@@ -58,9 +58,9 @@ function swoole_client_select(array &$read, array &$write, array &$error, $timeo
 }
 
 /**
- * 定义间隔定时器
+ * Create a interval timer.
  *
- * @param int $after 间隔时间，单位毫秒
+ * @param int $interval
  * @param callable $callback
  * @param array $params
  *
@@ -71,9 +71,9 @@ function swoole_timer_tick($interval, $callback, array $params = [])
 }
 
 /**
- * 定义延迟定时器
+ * Create a defer timer.
  *
- * @param int $after 延迟时间，单位毫秒
+ * @param int $after
  * @param callable $callback
  * @param array $params
  *
@@ -84,7 +84,7 @@ function swoole_timer_after($after, $callback, array $params = [])
 }
 
 /**
- * 清除定时器
+ * Remove the timer.
  *
  * @param int $timerId
  *
@@ -95,7 +95,7 @@ function swoole_timer_clear($timerId)
 }
 
 /**
- * 判断定时器是存在
+ * Return whether the timer exists.
  *
  * @param int $timerId
  *
@@ -106,7 +106,7 @@ function swoole_timer_exists($timerId)
 }
 
 /**
- * 加入事件监听
+ * Add to event listening.
  *
  * @param int|resource $fd
  * @param callable $readCallback
@@ -120,7 +120,7 @@ function swoole_event_add($fd, $readCallback = null, $writeCallback = null, $fla
 }
 
 /**
- * 向流中写入数据
+ * Write to stream.
  *
  * @param int|resource $fd
  * @param string $data
@@ -132,7 +132,7 @@ function swoole_event_write($fd, $data)
 }
 
 /**
- * 修改事件监听的回调
+ * Set the event's callbacks.
  *
  * @param int|resource $fd
  * @param callable $readCallback
@@ -146,7 +146,7 @@ function swoole_event_set($fd, $readCallback = null, $writeCallback = null, $fla
 }
 
 /**
- * 删除事件监听
+ * Remove the event listener.
  *
  * @param int|resource $fd
  *
@@ -157,7 +157,7 @@ function swoole_event_del($fd)
 }
 
 /**
- * 事件当次循环结束后回调
+ * Set the callback after current event loop.
  *
  * @param callable $callback
  *
@@ -168,7 +168,7 @@ function swoole_event_defer($callback)
 }
 
 /**
- * 事件每次循环结束后回调
+ * Set the callback after each event loop.
  *
  * @param callable $callback
  *
@@ -179,21 +179,21 @@ function swoole_event_cycle($callback)
 }
 
 /**
- * 退出事件循环
+ * Exit the event loop.
  */
 function swoole_event_exit()
 {
 }
 
 /**
- * 进入事件循环
+ * Enter the event loop.
  */
 function swoole_event_wait()
 {
 }
 
 /**
- * 设置当前运行进程名
+ * Set the current running process name.
  *
  * @param string $name
  * @param int $size
@@ -203,7 +203,7 @@ function swoole_set_process_name($name, $size = 128)
 }
 
 /**
- * 获取最近一次系统调用的错误码
+ * Get the error code of the most recent system call.
  *
  * @return int
  */
@@ -212,7 +212,7 @@ function swoole_errno()
 }
 
 /**
- * 将错误码转换成错误信息
+ * Convert error code to error message.
  *
  * @param int $error
  *

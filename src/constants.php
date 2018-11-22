@@ -1,360 +1,170 @@
 <?php
 
 /**
- * Swoole 版本号
+ * The Swoole version
  */
 const SWOOLE_VERSION = '1.10.0';
 
 
 /**
- * 运行模式：基础模式
+ * Server run mode : Base
  */
 const SWOOLE_BASE = 1;
 
 /**
- * 运行模式：线程模式
+ * Server run mode : Thread
  */
 const SWOOLE_THREAD = 2;
 
 /**
- * 运行模式：进程模式
+ * Server run mode : Process
  */
 const SWOOLE_PROCESS = 3;
 
 
 /**
- * Socket 类型：Tcp
+ * Socket type : Tcp
  */
 const SWOOLE_SOCK_TCP = 1;
-
-/**
- * Socket 类型：Udp
- */
-const SWOOLE_SOCK_UDP = 2;
-
-/**
- * Socket 类型：TCP Ipv6
- */
-const SWOOLE_SOCK_TCP6 = 3;
-
-/**
- * Socket 类型：Udp Ipv6
- */
-const SWOOLE_SOCK_UDP6 = 4;
-
-/**
- * Socket 类型：Unix Dgram
- */
-const SWOOLE_SOCK_UNIX_DGRAM = 5;
-
-/**
- * Socket 类型：Unix Stream
- */
-const SWOOLE_SOCK_UNIX_STREAM = 6;
-
-
-/**
- * Socket 类型：Tcp
- */
 const SWOOLE_TCP = SWOOLE_SOCK_TCP;
 
 /**
- * Socket 类型：Udp
+ * Socket type : Udp
  */
+const SWOOLE_SOCK_UDP = 2;
 const SWOOLE_UDP = SWOOLE_SOCK_UDP;
 
 /**
- * Socket 类型：TCP Ipv6
+ * Socket type : TCP with Ipv6
  */
+const SWOOLE_SOCK_TCP6 = 3;
 const SWOOLE_TCP6 = SWOOLE_SOCK_TCP6;
 
 /**
- * Socket 类型：Udp Ipv6
+ * Socket type : Udp with Ipv6
  */
+const SWOOLE_SOCK_UDP6 = 4;
 const SWOOLE_UDP6 = SWOOLE_SOCK_UDP6;
 
 /**
- * Socket 类型：Unix Dgram
+ * Socket type : Unix Dgram
  */
+const SWOOLE_SOCK_UNIX_DGRAM = 5;
 const SWOOLE_UNIX_DGRAM = SWOOLE_SOCK_UNIX_DGRAM;
 
 /**
- * Socket 类型：Unix Stream
+ * Socket type : Unix Stream
  */
+const SWOOLE_SOCK_UNIX_STREAM = 6;
 const SWOOLE_UNIX_STREAM = SWOOLE_SOCK_UNIX_STREAM;
 
-
 /**
- * SSL：SSL 启用标识
+ * Use SSL
  */
 const SWOOLE_SSL = 1 << 9;
 
 /**
- * 长连接：维持连接标识
+ * Connection Keep Alive
  */
 const SWOOLE_KEEP = 1 << 12;
 
 
 /**
- * Socket 模式：异步
+ * Socket mode : Async
  */
 const SWOOLE_SOCK_ASYNC = 1 << 10;
-
-/**
- * Socket 模式：同步
- */
-const SWOOLE_SOCK_SYNC = 1 << 11;
-
-/**
- * Socket 模式：异步
- */
 const SWOOLE_ASYNC = SWOOLE_SOCK_ASYNC;
 
 /**
- * Socket 模式：同步
+ * Socket mode : Sync
  */
+const SWOOLE_SOCK_SYNC = 1 << 11;
 const SWOOLE_SYNC = SWOOLE_SOCK_SYNC;
 
 /**
- * 事件类型：读取事件
+ * Event type : Read
  */
 const SWOOLE_EVENT_READ = 512;
 
 /**
- * 事件类型：写入事件
+ * Event type : Write
  */
 const SWOOLE_EVENT_WRITE = 1024;
 
 
 /**
- * WebSocket 操作码：文本
+ * WebSocket operate code : Text
  */
 const WEBSOCKET_OPCODE_TEXT = 1;
 
 /**
- * WebSocket 操作码：二进制
+ * WebSocket operate code : Binary
  */
 const WEBSOCKET_OPCODE_BINARY = 2;
 
 /**
- * WebSocket 操作码：Ping
+ * WebSocket operate code : Ping
  */
 const WEBSOCKET_OPCODE_PING = 9;
 
 
 /**
- * WebSocket 状态：连接中
+ * WebSocket status : Connecting
  */
 const WEBSOCKET_STATUS_CONNECTION = 1;
 
 /**
- * WebSocket 状态：握手中
+ * WebSocket status : Handshaking
  */
 const WEBSOCKET_STATUS_HANDSHAKE = 2;
 
 /**
- * WebSocket 状态：数据帧
+ * WebSocket status : Frame received
  */
 const WEBSOCKET_STATUS_FRAME = 3;
 
 /**
- * WebSocket 状态：活跃中
+ * WebSocket status : Active
  */
 const WEBSOCKET_STATUS_ACTIVE = 3;
 
 
 /**
- * 信号：
- */
-const SIGHUP = 1;
-
-/**
- * 信号：
- */
-const SIGINT = 2;
-
-/**
- * 信号：
- */
-const SIGQUIT = 3;
-
-/**
- * 信号：
- */
-const SIGILL = 4;
-
-/**
- * 信号：
- */
-const SIGTRAP = 5;
-
-/**
- * 信号：
- */
-const SIGABRT = 6;
-
-/**
- * 信号：
- */
-const SIGBUS = 7;
-
-/**
- * 信号：
- */
-const SIGFPE = 8;
-
-/**
- * 信号：
- */
-const SIGKILL = 9;
-
-/**
- * 信号：
- */
-const SIGUSR1 = 10;
-
-/**
- * 信号：
- */
-const SIGSEGV = 11;
-
-/**
- * 信号：
- */
-const SIGUSR2 = 12;
-
-/**
- * 信号：
- */
-const SIGPIPE = 13;
-
-/**
- * 信号：
- */
-const SIGALRM = 14;
-
-/**
- * 信号：
- */
-const SIGTERM = 15;
-
-/**
- * 信号：
- */
-const SIGSTKFLT = 16;
-
-/**
- * 信号：
- */
-const SIGCHLD = 17;
-
-/**
- * 信号：
- */
-const SIGCONT = 18;
-
-/**
- * 信号：
- */
-const SIGSTOP = 19;
-
-/**
- * 信号：
- */
-const SIGTSTP = 20;
-
-/**
- * 信号：
- */
-const SIGTTIN = 21;
-
-/**
- * 信号：
- */
-const SIGTTOU = 22;
-
-/**
- * 信号：
- */
-const SIGURG = 23;
-
-/**
- * 信号：
- */
-const SIGXCPU = 24;
-
-/**
- * 信号：
- */
-const SIGXFSZ = 25;
-
-/**
- * 信号：
- */
-const SIGVTALRM = 26;
-
-/**
- * 信号：
- */
-const SIGPROF = 27;
-
-/**
- * 信号：
- */
-const SIGWINCH = 28;
-
-/**
- * 信号：
- */
-const SIGIO = 29;
-
-/**
- * 信号：
- */
-const SIGPWR = 30;
-
-/**
- * 信号：
- */
-const SIGSYS = 31;
-
-
-/**
- * 锁类型：读写锁
+ * Lock type : Read and write
  */
 const SWOOLE_RWLOCK = 1;
 
 /**
- * 锁类型：文件锁
+ * Lock type : File
  */
 const SWOOLE_FILELOCK = 2;
 
 /**
- * 锁类型：互斥锁
+ * Lock type : Mutex
  */
 const SWOOLE_MUTEX = 3;
 
 /**
- * 锁类型：信号量
+ * Lock type : Semaphore
  */
 const SWOOLE_SEM = 4;
 
 /**
- * 锁类型：自旋锁
+ * Lock type : Spin
  */
 const SWOOLE_SPINLOCK = 5;
 
 /**
- * 序列化参数：快速打包（不保留数组 Key）
+ * Serialize : Fast pack ( Remove all keys in array )
  */
 const SWOOLE_FAST_PACK = 1;
 
 /**
- * 反序列化参数：解析对象为数组
+ * Serialize : Decode object as array
  */
 const UNSERIALIZE_OBJECT_TO_ARRAY = 1;
 
 /**
- * 反序列化参数：解析对象为标准对象
+ * Serialize : Decode object as object
  */
 const UNSERIALIZE_OBJECT_TO_STDCLASS = 2;
