@@ -204,6 +204,8 @@ function swoole_event_wait()
 
 /**
  * Wait and dispatch event once.
+ *
+ * @return bool
  */
 function swoole_event_dispatch()
 {
@@ -214,6 +216,8 @@ function swoole_event_dispatch()
  *
  * @param mixed $fd
  * @param int $flag
+ *
+ * @return bool
  */
 function swoole_event_isset($fd, $flag = SWOOLE_EVENT_READ | SWOOLE_EVENT_WRITE)
 {

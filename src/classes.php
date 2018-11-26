@@ -160,3 +160,10 @@ class swoole_connection_iterator extends \Swoole\Connection\Iterator
 class swoole_mysql_exception extends \Swoole\MySQL\Exception
 {
 }
+
+/**
+ * Class swoole_async
+ */
+class swoole_async extends \Swoole\Async
+{
+}
