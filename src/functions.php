@@ -17,6 +17,15 @@ function swoole_last_error()
 }
 
 /**
+ * Get the file's mime type.
+ *
+ * @param string $filename
+ */
+function swoole_get_mime_type($filename)
+{
+}
+
+/**
  * Get the number of Cpu cores。
  *
  * @return int
@@ -108,7 +117,7 @@ function swoole_timer_exists($timerId)
 /**
  * Add to event listening.
  *
- * @param int|resource $fd
+ * @param mixed $fd
  * @param callable $readCallback
  * @param callable $writeCallback
  * @param int $flags
@@ -122,7 +131,7 @@ function swoole_event_add($fd, $readCallback = null, $writeCallback = null, $fla
 /**
  * Write to stream.
  *
- * @param int|resource $fd
+ * @param mixed $fd
  * @param string $data
  *
  * @return bool
@@ -134,7 +143,7 @@ function swoole_event_write($fd, $data)
 /**
  * Set the event's callbacks.
  *
- * @param int|resource $fd
+ * @param mixed $fd
  * @param callable $readCallback
  * @param callable $writeCallback
  * @param int $flags
@@ -148,7 +157,7 @@ function swoole_event_set($fd, $readCallback = null, $writeCallback = null, $fla
 /**
  * Remove the event listener.
  *
- * @param int|resource $fd
+ * @param mixed $fd
  *
  * @return bool
  */
@@ -171,10 +180,11 @@ function swoole_event_defer($callback)
  * Set the callback after each event loop.
  *
  * @param callable $callback
+ * @param bool $before
  *
  * @return bool
  */
-function swoole_event_cycle($callback)
+function swoole_event_cycle($callback, $before = false)
 {
 }
 
@@ -189,6 +199,23 @@ function swoole_event_exit()
  * Enter the event loop.
  */
 function swoole_event_wait()
+{
+}
+
+/**
+ * Wait and dispatch event once.
+ */
+function swoole_event_dispatch()
+{
+}
+
+/**
+ * Return whether the event listener exists.
+ *
+ * @param mixed $fd
+ * @param int $flag
+ */
+function swoole_event_isset($fd, $flag = SWOOLE_EVENT_READ | SWOOLE_EVENT_WRITE)
 {
 }
 
@@ -215,10 +242,11 @@ function swoole_errno()
  * Convert error code to error message.
  *
  * @param int $error
+ * @param int $errorType
  *
  * @return string
  */
-function swoole_strerror($error)
+function swoole_strerror($error, $errorType = 0)
 {
 }
 
@@ -355,3 +383,4 @@ function swoole_coroutine_exec($command, $getErrorStream = false)
 function swoole_coroutine_defer($callback)
 {
 }
+

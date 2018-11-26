@@ -84,12 +84,12 @@ const SWOOLE_SYNC = SWOOLE_SOCK_SYNC;
 /**
  * Event type : Read
  */
-const SWOOLE_EVENT_READ = 512;
+const SWOOLE_EVENT_READ = 1 << 9;
 
 /**
  * Event type : Write
  */
-const SWOOLE_EVENT_WRITE = 1024;
+const SWOOLE_EVENT_WRITE = 1 << 10;
 
 
 /**
